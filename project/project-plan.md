@@ -3,16 +3,15 @@
 ## Summary
 
 <!-- Describe your data science project in max. 5 sentences. -->
-This projects analyzes bicycle traffic of 13 cities and communes across Baden-Württemberg in relation to recorded local weather data.
-
+This project analyzes bicycle traffic in 13 cities and communes across Baden-Württemberg in relation to recorded local weather data. The goal is to visualize a correlation (should it exist) between different weather conditions to the daily popularity of bicycling.
 ### Research Question
 Which effects have certain weather conditions on the frequency of bicycle traffic?
 ## Rationale
 
 <!-- Outline the impact of the analysis, e.g. which pains it solves. -->
 The analysis helps policymakers to see current pain points caused by weather that hamper the popularity of sustainable transport. 
-By analyzing usage pattern, city planners can improve road infrastructure against certain weather conditions to promote cycling.
-Through continuous integration of new data, policymakers can review real world effects of infrastructure changes by comparing current bicycle frequencies to historic ones under different weather conditions.
+By analyzing usage patterns, city planners can improve road infrastructure against certain weather conditions to promote cycling.
+Through continuous integration of new data, policymakers can review real-world effects of infrastructure changes by comparing current bicycle frequencies to historic ones under different weather conditions.
 ## Data Sources
 
 <!-- Describe each data sources you plan to use in a section. Use the prefix "DatasourceX" where X is the id of the data source. -->
@@ -76,7 +75,17 @@ Records of daily weather parameters(temperature, precipitation, snowfall, sunshi
 
 <!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
 
-1. Example Issue [#1][i1]
-2. ...
+1. Fetch the latest data from sources [#1][i1]
+2. Prepare weather data for analysis [#2][i2]
+3. Prepare bicycling data for analysis [#3][i3]
+4. CD: set up a pipeline for continuous integration of new data [#4][i4]
+5. Review if there are missing data in the historical weather records [#5][i5]
+6. Visualize the integrated dataset to gain insights into the relationship between weather conditions and bicycle traffic [#6][i6]
+
 
 [i1]: https://github.com/jvalue/2023-amse-template/issues/1
+[i2]: https://github.com/jvalue/2023-amse-template/issues/2
+[i3]: https://github.com/jvalue/2023-amse-template/issues/3
+[i4]: https://github.com/jvalue/2023-amse-template/issues/4
+[i5]: https://github.com/jvalue/2023-amse-template/issues/5
+[i6]: https://github.com/jvalue/2023-amse-template/issues/6
