@@ -19,34 +19,63 @@ Through continuous integration of new data, policymakers can review real-world e
 ### Datasource1: Consolidated Eco-counter Bicycle Count Data for Baden-Württemberg
 * Metadata URL: https://mobilithek.info/offers/-5646868446023868292
 * Data URLs: 
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202101.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202102.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202103.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202104.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202105.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202106.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202107.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202108.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202109.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202110.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202111.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202112.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202201.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202202.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202203.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202204.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202205.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202206.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202207.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202208.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202209.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202210.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202211.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202212.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202301.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202302.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202303.csv.gz
-https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202304.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202101.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202102.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202103.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202104.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202105.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202106.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202107.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202108.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202109.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202110.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202111.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202112.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202201.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202202.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202203.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202204.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202205.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202206.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202207.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202208.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202209.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202210.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202211.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202212.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202301.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202302.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202303.csv.gz
+
+    https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_202304.csv.gz
+
 * Data Type: CSV
 
 Daily bicycle frequencies of 13 cities and communes across Baden-Württemberg, 
@@ -55,19 +84,33 @@ collected from automated counting stations, spread around cities, from Jan. 2021
 ### Datasource2: Daily Station Observations of Multiple Weather Parameters
 * Metadata URL: https://dev.meteostat.net/bulk/daily.html
 * Data URLs:
-https://bulk.meteostat.net/v2/daily/10929.csv.gz (Konstanz)
-https://bulk.meteostat.net/v2/daily/10739.csv.gz (Stuttgart)
-https://bulk.meteostat.net/v2/daily/10756.csv.gz (Heilbronn)
-https://bulk.meteostat.net/v2/daily/EDTR0.csv.gz (Lörrach)
-https://bulk.meteostat.net/v2/daily/D4160.csv.gz (Böblingen)
-https://bulk.meteostat.net/v2/daily/D4294.csv.gz (Tübingen)
-https://bulk.meteostat.net/v2/daily/D3278.csv.gz (Reutlingen)
-https://bulk.meteostat.net/v2/daily/D6263.csv.gz (Singen)
-https://bulk.meteostat.net/v2/daily/10838.csv.gz (Ulm)
-https://bulk.meteostat.net/v2/daily/10739.csv.gz (Ludwigsburg)
-https://bulk.meteostat.net/v2/daily/D1089.csv.gz (Offenburg)
-https://bulk.meteostat.net/v2/daily/10734.csv.gz (Heidelberg)
-https://bulk.meteostat.net/v2/daily/10803.csv.gz (Freiburg)
+
+    https://bulk.meteostat.net/v2/daily/10929.csv.gz (Konstanz)
+
+    https://bulk.meteostat.net/v2/daily/10739.csv.gz (Stuttgart)
+
+    https://bulk.meteostat.net/v2/daily/10756.csv.gz (Heilbronn)
+
+    https://bulk.meteostat.net/v2/daily/EDTR0.csv.gz (Lörrach)
+
+    https://bulk.meteostat.net/v2/daily/D4160.csv.gz (Böblingen)
+
+    https://bulk.meteostat.net/v2/daily/D4294.csv.gz (Tübingen)
+
+    https://bulk.meteostat.net/v2/daily/D3278.csv.gz (Reutlingen)
+
+    https://bulk.meteostat.net/v2/daily/D6263.csv.gz (Singen)
+
+    https://bulk.meteostat.net/v2/daily/10838.csv.gz (Ulm)
+
+    https://bulk.meteostat.net/v2/daily/10739.csv.gz (Ludwigsburg)
+
+    https://bulk.meteostat.net/v2/daily/D1089.csv.gz (Offenburg)
+
+    https://bulk.meteostat.net/v2/daily/10734.csv.gz (Heidelberg)
+
+    https://bulk.meteostat.net/v2/daily/10803.csv.gz (Freiburg)
+
 * Data Type: CSV
 
 Records of daily weather parameters(temperature, precipitation, snowfall, sunshine duration) of 13 locations which occur in Datasource1. 
