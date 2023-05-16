@@ -103,7 +103,7 @@ collected from automated counting stations, spread around cities, from Jan. 2021
 
     https://bulk.meteostat.net/v2/daily/10838.csv.gz (Ulm)
 
-    https://bulk.meteostat.net/v2/daily/10739.csv.gz (Ludwigsburg)
+    https://bulk.meteostat.net/v2/daily/10739.csv.gz (Ludwisburg)
 
     https://bulk.meteostat.net/v2/daily/D1089.csv.gz (Offenburg)
 
