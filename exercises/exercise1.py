@@ -3,7 +3,7 @@ import sqlalchemy as sql
 
 url = "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/rhein-kreis-neuss-flughafen-weltweit/exports/csv"
 df = pd.read_csv(url, delimiter=';')
-engine = sql.create_engine("sqlite:///exercises/airports.sqlite")
+engine = sql.create_engine("sqlite:///airports.sqlite")
 airportModel = {
     "column_1": sql.types.Integer,
     "column_2": sql.types.String,
