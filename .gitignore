@@ -1,2 +1,4 @@
 data/__pycache__/
 data/data.sqlite
+exercises/airports.sqlite
+.vscode/settings.json
