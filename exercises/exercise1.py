@@ -2,7 +2,7 @@ import pandas as pd
 import sqlalchemy as sql
 
 url = "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/rhein-kreis-neuss-flughafen-weltweit/exports/csv"
-df = pd.read_csv(url, delimiter=';')
+df = pd.read_csv(url, delimiter=";")
 engine = sql.create_engine("sqlite:///airports.sqlite")
 airportModel = {
     "column_1": sql.types.Integer,
@@ -17,6 +17,6 @@ airportModel = {
     "column_10": sql.types.Float,
     "column_11": sql.types.String,
     "column_12": sql.types.String,
-    "geo_punkt": sql.types.String
+    "geo_punkt": sql.types.String,
 }
 df.to_sql("airports", engine, if_exists="replace", index=False, dtype=airportModel)
