@@ -1,7 +1,7 @@
 pipeline TrainstopsPipeline {
 	
 	constraint VerkehrConstraint oftype AllowlistConstraint {
-		allowlist: ["FV", "RV", "DPN"];
+		allowlist: ["FV", "RV", "nur DPN"];
 	}
 
 	valuetype VerkehrType oftype text {
