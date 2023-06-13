@@ -11,7 +11,7 @@ bicycleURL = (
     "https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_DATE.csv.gz"
 )
 weatherURL = "https://bulk.meteostat.net/v2/daily/STATION.csv.gz"
-
+blacklistedStations = {100013034, 100012161, 100048814, 100036542}
 
 def importBicycleData(db, cycleDS):
     conn = sqlite3.connect(path)
@@ -20,6 +20,8 @@ def importBicycleData(db, cycleDS):
     for city in cycleDS.data[0][["standort"]].groupby("standort"):
         db.addCity(cursor, city[0])
     for city in cycleDS.data[0].groupby("counter_site"):
+        if (int(city[1].iloc[0]["counter_site_id"]) in blacklistedStations):
+            continue
         cursor.execute(
             """
 			SELECT id FROM city
@@ -27,6 +29,7 @@ def importBicycleData(db, cycleDS):
 		""",
             (city[1].iloc[0]["standort"],),
         )
+
         db.addBicycleStation(
             cursor,
             city[0],
@@ -44,7 +47,6 @@ def importBicycleData(db, cycleDS):
     for station in cursor.fetchall():
         nameToStationID[station[1]] = station[0]
 
-    blacklistedStations = set()
     for monthlyEntry in cycleDS.data:
         dateString = datetime.datetime.strptime(
             monthlyEntry.iloc[0]["timestamp"], "%Y-%m-%dT%H:%M:%S%z"
@@ -52,8 +54,8 @@ def importBicycleData(db, cycleDS):
         print(f"Importing bicycle data for {dateString}")
         utils.clear()
         for i, entry in monthlyEntry.iterrows():
-            if entry["counter_site"] not in nameToStationID:
-                blacklistedStations.add(entry["counter_site"])
+            if int(entry["counter_site_id"]) in blacklistedStations or entry["counter_site"] not in nameToStationID:
+                blacklistedStations.add(int(entry["counter_site_id"]))
                 continue
             db.addBicycleCount(
                 cursor,
