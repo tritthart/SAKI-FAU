@@ -1,6 +1,5 @@
 import pandas as pd
 import sqlalchemy as sql
-import re
 
 url = "https://www-genesis.destatis.de/genesis/downloads/00/tables/46251-0021_00.csv"
 
