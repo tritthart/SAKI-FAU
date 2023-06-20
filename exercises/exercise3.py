@@ -33,7 +33,7 @@ df = pd.read_csv(
 ).dropna()
 
 # Constraints
-df = df[(df["CIN"].str.len() == 5) & (df["CIN"].str.match(re.compile(r"\d+")))]
+df = df[(df["CIN"].str.len() == 5) & (df["CIN"].str.isdigit())]
 df = df[
     (df["petrol"] > 0)
     & (df["diesel"] > 0)
