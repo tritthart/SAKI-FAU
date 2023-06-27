@@ -47,11 +47,16 @@ def importBicycleData(db, cycleDS):
         nameToStationID[station[1]] = station[0]
 
     for monthlyEntry in cycleDS.data:
-        dateString = datetime.datetime.strptime(monthlyEntry.iloc[0]["timestamp"], "%Y-%m-%dT%H:%M:%S%z").strftime("%B, %Y")
+        dateString = datetime.datetime.strptime(
+            monthlyEntry.iloc[0]["timestamp"], "%Y-%m-%dT%H:%M:%S%z"
+        ).strftime("%B, %Y")
         print(f"Importing bicycle data for {dateString}")
         utils.clear()
         for i, entry in monthlyEntry.iterrows():
-            if int(entry["counter_site_id"]) in blacklistedStations or entry["counter_site"] not in nameToStationID:
+            if (
+                int(entry["counter_site_id"]) in blacklistedStations
+                or entry["counter_site"] not in nameToStationID
+            ):
                 blacklistedStations.add(int(entry["counter_site_id"]))
                 continue
             db.addBicycleCount(
