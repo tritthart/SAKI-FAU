@@ -6,11 +6,5 @@ airports.sqlite
 trainstops.sqlite
 cars.sqlite
 saki/*
-data/figures/prcp.png
-data/figures/pres.png
-data/figures/tavg.png
-data/figures/tsun.png
-data/figures/wdir.png
-data/figures/wspd.png
 project/__pycache__/report_utils.cpython-311.pyc
 project/slides.key
