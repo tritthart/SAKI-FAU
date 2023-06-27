@@ -2,3 +2,7 @@ SQLAlchemy==1.4.46
 pandas==2.0.0
 requests==2.30.0
 plotly==5.15.0
+nbconvert==7.6.0
+statsmodels==0.14.0
+geopandas==0.13.2
+kaleido==0.2.1
