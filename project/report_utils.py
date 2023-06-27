@@ -206,7 +206,7 @@ weatherTypes = ["tavg", "tmax", "tmin", "tsun", "pres", "prcp", "wpgt", "snow", 
 # Sourced from:
 # https://fahrradklima-test.adfc.de/fileadmin/BV/FKT/Download-Material/Ergebnisse_2022/ADFC-Fahrradklima-Test_2022_Ergebnistabelle_Druck_Gesamt_A3_230404.pdf
 rank = {
-    "Stadt Ludwisburg": 3.64,
+    "Stadt Ludwigsburg": 3.64,
     "Landeshauptstadt Stuttgart": 4.2,
     "Stadt Heidelberg": 3.64,
     "Stadt Lörrach": 3.77,

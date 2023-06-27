@@ -29,7 +29,9 @@ class BicycleDataSource:
                 raise ValueError(f"Pipeline failed to fetch data")
                 break
             rawData = gzip.decompress(r.content)
-            self.data.append(pd.read_csv(StringIO(rawData.decode("utf-8"))))
+            df = pd.read_csv(StringIO(rawData.decode("utf-8")))
+            df.replace("Stadt Ludwisburg", "Stadt Ludwigsburg", inplace=True)
+            self.data.append(df)
 
 
 class WeatherDataSource:
