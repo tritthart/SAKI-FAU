@@ -7,11 +7,10 @@ from db_manager import DBManager
 
 # Config
 path = "./data/data.sqlite"
-bicycleURL = (
-    "https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_DATE.csv.gz"
-)
+bicycleURL = "https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler_DATE.csv.gz"
 weatherURL = "https://bulk.meteostat.net/v2/daily/STATION.csv.gz"
 blacklistedStations = {100013034, 100012161, 100048814, 100036542}
+
 
 def importBicycleData(db, cycleDS):
     conn = sqlite3.connect(path)
@@ -20,7 +19,7 @@ def importBicycleData(db, cycleDS):
     for city in cycleDS.data[0][["standort"]].groupby("standort"):
         db.addCity(cursor, city[0])
     for city in cycleDS.data[0].groupby("counter_site"):
-        if (int(city[1].iloc[0]["counter_site_id"]) in blacklistedStations):
+        if int(city[1].iloc[0]["counter_site_id"]) in blacklistedStations:
             continue
         cursor.execute(
             """
@@ -48,9 +47,7 @@ def importBicycleData(db, cycleDS):
         nameToStationID[station[1]] = station[0]
 
     for monthlyEntry in cycleDS.data:
-        dateString = datetime.datetime.strptime(
-            monthlyEntry.iloc[0]["timestamp"], "%Y-%m-%dT%H:%M:%S%z"
-        ).strftime("%B, %Y")
+        dateString = datetime.datetime.strptime(monthlyEntry.iloc[0]["timestamp"], "%Y-%m-%dT%H:%M:%S%z").strftime("%B, %Y")
         print(f"Importing bicycle data for {dateString}")
         utils.clear()
         for i, entry in monthlyEntry.iterrows():
