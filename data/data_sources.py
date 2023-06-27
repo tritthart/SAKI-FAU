@@ -15,9 +15,7 @@ class BicycleDataSource:
         self.data = []
 
     def fetchData(self):
-        dates = list(
-            rrule(freq=MONTHLY, dtstart=self.startDate, until=datetime.datetime.now())
-        )
+        dates = list(rrule(freq=MONTHLY, dtstart=self.startDate, until=datetime.datetime.now()))
         for d in dates:
             url = self.url.replace("DATE", d.strftime("%Y%m"))
             print(f"Fetching data for {d.strftime('%B, %Y')}")
@@ -44,8 +42,8 @@ class WeatherDataSource:
         "Tübingen": "D4294",
         "Reutlingen": "D3278",
         "Singen": "D6263",
-        "Ulm": "D5444", # For `10838` no perception data exited, so we took `D5444` (10km away from Ulm)
-        "Ludwisburg": "10739",
+        "Ulm": "D5444",  # For `10838` no perception data exited, so we took `D5444` (10km away from Ulm)
+        "Ludwigsburg": "10739",
         "Offenburg": "D1089",
         "Heidelberg": "69090",
         "Freiburg": "10803",
