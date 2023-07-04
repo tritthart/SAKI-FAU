@@ -1,0 +1,124 @@
+transform CelsiusToFahrenheit {
+	from temperatureIn oftype decimal;
+	to temperatureOut oftype decimal;
+
+	temperatureOut: ((temperatureIn * 9/5) + 32);
+}
+
+pipeline TrainstopsPipeline {
+	
+	constraint JaNein oftype AllowlistConstraint {
+		allowlist: ["Ja", "Nein"];
+	}
+
+	valuetype JaNeinType oftype text {
+		constraints: [JaNein];
+	}
+
+	constraint IDConstraint oftype RangeConstraint {
+		lowerBound: 0;
+	}
+
+	constraint MonthConstraint oftype RangeConstraint {
+		lowerBound: 0;
+		upperBound: 13;
+	}
+
+	constraint TemperaturMinConstraint oftype RangeConstraint {
+		lowerBound: -459.68;
+	}
+
+	valuetype TemperaturType oftype decimal {
+		constraints: [TemperaturMinConstraint];
+	}
+
+	valuetype MonthType oftype integer {
+		constraints: [MonthConstraint];
+	}
+	
+	valuetype IDType oftype integer {
+		constraints: [IDConstraint];
+	}
+
+	block Extractor oftype HttpExtractor {
+		url: "https://www.mowesta.com/data/measure/mowesta-dataset-20221107.zip";
+	}
+
+	block ZipArchiveInterpreter oftype ArchiveInterpreter {
+		archiveType: "zip";
+	}
+
+	block FilePicker oftype FilePicker {
+		path: "/data.csv";
+	}
+	
+	block TextFileInterpreter oftype TextFileInterpreter {
+	}
+
+	block CSVInterpreter oftype CSVInterpreter {  
+		delimiter: ";";
+	}
+
+	block DataSelector oftype CellRangeSelector {
+		select: range A1:N*;
+	}
+
+	block ColumnDeleter oftype ColumnDeleter {
+		delete: [column F, column G, column H, column I];
+	}
+
+	block Header1Writer oftype CellWriter {
+		at: cell E1;
+		write: ["Temperatur"];
+	}
+
+	block Header2Writer oftype CellWriter {
+		at: cell J1;
+		write: ["Batterietemperatur"];
+	}
+
+	block CelsiusToFahrenheit1Transformer oftype TableTransformer {
+		inputColumn: "Temperatur";
+		outputColumn: "Temperatur";
+		use: CelsiusToFahrenheit;
+	}
+
+		block CelsiusToFahrenheit2Transformer oftype TableTransformer {
+		inputColumn: "Batterietemperatur";
+		outputColumn: "Batterietemperatur";
+		use: CelsiusToFahrenheit;
+	}
+
+
+	block TableInterpreter oftype TableInterpreter {
+        header: true;
+        columns: [
+            "Geraet" oftype IDType,
+            "Hersteller" oftype text,
+            "Model" oftype text,
+            "Monat" oftype MonthType,
+            "Temperatur" oftype TemperaturType,
+            "Batterietemperatur" oftype TemperaturType,
+            "Geraet aktiv" oftype JaNeinType,
+        ];
+    }
+
+	block DatabaseLoader oftype SQLiteLoader { 
+		table: "temperatures"; 
+		file: "temperatures.sqlite"; 
+	}
+
+	Extractor
+	-> ZipArchiveInterpreter
+	-> FilePicker
+	-> TextFileInterpreter
+	-> CSVInterpreter
+	-> Header1Writer
+	-> Header2Writer
+	-> DataSelector
+	-> ColumnDeleter
+	-> TableInterpreter
+	-> CelsiusToFahrenheit1Transformer
+	-> CelsiusToFahrenheit2Transformer
+	-> DatabaseLoader;
+}
