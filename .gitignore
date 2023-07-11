@@ -9,3 +9,4 @@ saki/*
 project/__pycache__/report_utils.cpython-311.pyc
 project/slides.key
 temperatures.sqlite
+gtfs.sqlite
